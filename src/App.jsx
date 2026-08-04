@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import QuizCard from './components/QuizCard';
 import ScoreDashboard from './components/ScoreDashboard';
-import MultiAgentStudio from './components/MultiAgentStudio';
 import FrameworkGuide from './components/FrameworkGuide';
 import seedScenarios from './data/scenarios_seed.json';
 
@@ -125,10 +124,6 @@ export default function App() {
           </div>
         )}
 
-        {activeTab === 'studio' && (
-          <MultiAgentStudio />
-        )}
-
         {activeTab === 'guide' && (
           <FrameworkGuide />
         )}
@@ -136,7 +131,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-slate-900 py-6 text-center text-xs text-slate-500">
-        <p>Supercommunicators MCQ Training Module • Built with Charles Duhigg's Framework & Google Antigravity Multi-Agent SDK</p>
+        <p>Supercommunicators MCQ Training Module • Powered by Charles Duhigg's Framework & Antigravity Pipeline</p>
       </footer>
 
     </div>

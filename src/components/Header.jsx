@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Sparkles, Award, Bot, BookOpen, Layers } from 'lucide-react';
+import { Brain, Sparkles, Award, BookOpen } from 'lucide-react';
 
 export default function Header({ activeTab, setActiveTab, stats, supercommunicatorRank }) {
   return (
@@ -39,18 +39,6 @@ export default function Header({ activeTab, setActiveTab, stats, supercommunicat
           </button>
 
           <button
-            onClick={() => setActiveTab('studio')}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-              activeTab === 'studio'
-                ? 'bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
-            }`}
-          >
-            <Bot className="w-4 h-4 text-cyan-400" />
-            <span>4-Agent Studio</span>
-          </button>
-
-          <button
             onClick={() => setActiveTab('guide')}
             className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
               activeTab === 'guide'
@@ -59,7 +47,7 @@ export default function Header({ activeTab, setActiveTab, stats, supercommunicat
             }`}
           >
             <BookOpen className="w-4 h-4 text-emerald-400" />
-            <span>Framework</span>
+            <span>Framework Guide</span>
           </button>
         </nav>
 
