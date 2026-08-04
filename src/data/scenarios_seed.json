@@ -7,34 +7,34 @@
     "context": "In #design-critique at 7:30 PM, Marcus posts: 'Just spent 4 hours adjusting padding based on stakeholder feedback, only for them to ask why we aren't using the v1 layout from last month. I feel like my work here is completely invisible.'",
     "prompt": "How do you respond to MATCH Marcus's current conversation state?",
     "options": [
-      [
-        "A",
-        "What I'm hearing is that pouring hours into revisions only to have feedback reset feels deeply frustrating and invalidating. Is that right?",
-        true,
-        "Emotional",
-        "CORRECT (Emotional Match + Looping): Reflects his feelings of frustration and invisibility, asking for confirmation."
-      ],
-      [
-        "B",
-        "You should set up a Figma version history log so stakeholders can see the exact timeline of changes.",
-        false,
-        "Mismatch",
-        "MISMATCH (Unsolicited Optimization): Giving Figma workflow tips when someone feels invisible misses their emotional state."
-      ],
-      [
-        "C",
-        "Don't worry Marcus! Design is always subjective, tomorrow they will love it! \ud83c\udfa8\u2728",
-        false,
-        "Mismatch",
-        "MISMATCH (Toxic Positivity): Brushing off his exhaustion with forced optimism invalidates his experience."
-      ],
-      [
-        "D",
-        "Send me the Figma link and I will revert the artboard to v1 right now.",
-        false,
-        "Practical",
-        "MISMATCH (Practical Overreach): Solves the file state without connecting with the human."
-      ]
+      {
+        "id": "A",
+        "text": "What I'm hearing is that pouring hours into revisions only to have feedback reset feels deeply frustrating and invalidating. Is that right?",
+        "is_correct": true,
+        "response_type": "Emotional",
+        "feedback": "CORRECT (Emotional Match + Looping): Reflects his feelings of frustration and invisibility, asking for confirmation."
+      },
+      {
+        "id": "B",
+        "text": "You should set up a Figma version history log so stakeholders can see the exact timeline of changes.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving Figma workflow tips when someone feels invisible misses their emotional state."
+      },
+      {
+        "id": "C",
+        "text": "Don't worry Marcus! Design is always subjective, tomorrow they will love it! \ud83c\udfa8\u2728",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Toxic Positivity): Brushing off his exhaustion with forced optimism invalidates his experience."
+      },
+      {
+        "id": "D",
+        "text": "Send me the Figma link and I will revert the artboard to v1 right now.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Overreach): Solves the file state without connecting with the human."
+      }
     ],
     "core_takeaway": "Validate emotional exhaustion before offering workflow fixes or file tweaks."
   },
@@ -46,34 +46,34 @@
     "context": "Work friend Sarah texts: 'Hey, noticed you seemed a bit quiet when Alex was dividing up the client leads during the regional sync. You were original lead on the West territory\u2014are you feeling okay with how team status was handled?'",
     "prompt": "How do you respond to Sarah to MATCH her relational/social state?",
     "options": [
-      [
-        "A",
-        "Honestly, it felt pretty uncomfortable to watch. It sounds like you're checking in on how I feel about fairness and status in our team. I really appreciate you reaching out.",
-        true,
-        "Social",
-        "CORRECT (Social Matching): Validates Sarah's social check-in, acknowledges the status dynamic, and strengthens peer trust."
-      ],
-      [
-        "B",
-        "I will file a territory dispute ticket with Sales Operations tomorrow morning.",
-        false,
-        "Practical",
-        "MISMATCH (Practical Overreach): Escalating to administrative tickets misses the warm social check-in."
-      ],
-      [
-        "C",
-        "It's no big deal at all! Everything happens for a reason! \ud83d\ude0a",
-        false,
-        "Mismatch",
-        "MISMATCH (Toxic Positivity): Brushing off team status dynamics shuts down supportive dialogue."
-      ],
-      [
-        "D",
-        "Alex is just an aggressive territory thief, don't trust him.",
-        false,
-        "Mismatch",
-        "MISMATCH (Destructive Venting): Personal attacks create toxicity rather than social alignment."
-      ]
+      {
+        "id": "A",
+        "text": "Honestly, it felt pretty uncomfortable to watch. It sounds like you're checking in on how I feel about fairness and status in our team. I really appreciate you reaching out.",
+        "is_correct": true,
+        "response_type": "Social",
+        "feedback": "CORRECT (Social Matching): Validates Sarah's social check-in, acknowledges the status dynamic, and strengthens peer trust."
+      },
+      {
+        "id": "B",
+        "text": "I will file a territory dispute ticket with Sales Operations tomorrow morning.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Overreach): Escalating to administrative tickets misses the warm social check-in."
+      },
+      {
+        "id": "C",
+        "text": "It's no big deal at all! Everything happens for a reason! \ud83d\ude0a",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Toxic Positivity): Brushing off team status dynamics shuts down supportive dialogue."
+      },
+      {
+        "id": "D",
+        "text": "Alex is just an aggressive territory thief, don't trust him.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Destructive Venting): Personal attacks create toxicity rather than social alignment."
+      }
     ],
     "core_takeaway": "Social conversations around identity and status require acknowledging relationship cues and peer trust."
   },
@@ -85,34 +85,34 @@
     "context": "During a live product demo on Zoom, Lead Engineer Priya private messages you: 'The payment gateway staging API just threw a 502 Bad Gateway error. Do I stall the client with a 5-minute Q&A block while you reset the pod, or do we switch to static video recording now?'",
     "prompt": "How do you respond to MATCH Priya's state under tight time pressure?",
     "options": [
-      [
-        "A",
-        "Switch to static video recording immediately. I will reset the staging pod silently in parallel.",
-        true,
-        "Practical",
-        "CORRECT (Practical Matching): Delivers an instantaneous, clear operational decision matching her time-critical request."
-      ],
-      [
-        "B",
-        "Oh no! Take a deep breath Priya! We got this, stay calm!",
-        false,
-        "Emotional",
-        "MISMATCH (Emotional Cheerleading): Pep talks during an active demo delay critical operational choices."
-      ],
-      [
-        "C",
-        "We should hold a post-mortem retro next Monday on staging cluster stability.",
-        false,
-        "Mismatch",
-        "MISMATCH (Timing Failure): Discussing future retro process when a live client is waiting."
-      ],
-      [
-        "D",
-        "Live demos give me so much anxiety!",
-        false,
-        "Emotional",
-        "MISMATCH (Self-Centered Emotion): Burdening her with your anxiety when a decision is needed."
-      ]
+      {
+        "id": "A",
+        "text": "Switch to static video recording immediately. I will reset the staging pod silently in parallel.",
+        "is_correct": true,
+        "response_type": "Practical",
+        "feedback": "CORRECT (Practical Matching): Delivers an instantaneous, clear operational decision matching her time-critical request."
+      },
+      {
+        "id": "B",
+        "text": "Oh no! Take a deep breath Priya! We got this, stay calm!",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during an active demo delay critical operational choices."
+      },
+      {
+        "id": "C",
+        "text": "We should hold a post-mortem retro next Monday on staging cluster stability.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Timing Failure): Discussing future retro process when a live client is waiting."
+      },
+      {
+        "id": "D",
+        "text": "Live demos give me so much anxiety!",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening her with your anxiety when a decision is needed."
+      }
     ],
     "core_takeaway": "Practical conversations demand quick, precise, actionable decisions."
   },
@@ -124,34 +124,34 @@
     "context": "In a 1-on-1 coffee chat, your direct report Maya leans back and sighs: 'I've worked 60-hour weeks for 3 months straight, but in our calibration call my manager said I need to improve my 'executive presence'. I feel like nothing I do is ever enough.'",
     "prompt": "Using Duhigg's 'Looping for Understanding' technique, which response best matches Maya's state?",
     "options": [
-      [
-        "A",
-        "What I'm hearing is that giving your absolute max energy and then being hit with vague feedback makes you feel deeply exhausted and unappreciated. Is that right?",
-        true,
-        "Emotional",
-        "CORRECT (Looping for Understanding): Summarizes her emotional core and asks 'Is that right?' to confirm."
-      ],
-      [
-        "B",
-        "You should take a public speaking course on LinkedIn Learning to boost your executive presence score.",
-        false,
-        "Mismatch",
-        "MISMATCH (Unsolicited Optimization): Giving course recommendations invalidates her emotional hurt."
-      ],
-      [
-        "C",
-        "Managers are under a lot of pressure right now, try not to take it personally!",
-        false,
-        "Mismatch",
-        "MISMATCH (Defense / Toxic Positivity): Defending management shuts down open vulnerability."
-      ],
-      [
-        "D",
-        "Let's review your slide deck format to make sure your presentation fonts look executive.",
-        false,
-        "Practical",
-        "MISMATCH (Practical Overreach): Focusing on fonts when someone feels inadequate."
-      ]
+      {
+        "id": "A",
+        "text": "What I'm hearing is that giving your absolute max energy and then being hit with vague feedback makes you feel deeply exhausted and unappreciated. Is that right?",
+        "is_correct": true,
+        "response_type": "Emotional",
+        "feedback": "CORRECT (Looping for Understanding): Summarizes her emotional core and asks 'Is that right?' to confirm."
+      },
+      {
+        "id": "B",
+        "text": "You should take a public speaking course on LinkedIn Learning to boost your executive presence score.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving course recommendations invalidates her emotional hurt."
+      },
+      {
+        "id": "C",
+        "text": "Managers are under a lot of pressure right now, try not to take it personally!",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Defense / Toxic Positivity): Defending management shuts down open vulnerability."
+      },
+      {
+        "id": "D",
+        "text": "Let's review your slide deck format to make sure your presentation fonts look executive.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Overreach): Focusing on fonts when someone feels inadequate."
+      }
     ],
     "core_takeaway": "Looping requires 3 steps: Listen, Reflect emotional core, and Ask for confirmation ('Is that right?')."
   },
@@ -163,34 +163,34 @@
     "context": "In #marketing-team at 6:45 PM, Jordan posts: 'Our campaign launch got pushed back for the 3rd time this month because leadership changed direction again. 3 weeks of work down the drain.'",
     "prompt": "How do you respond to MATCH Jordan's conversation state?",
     "options": [
-      [
-        "A",
-        "That is incredibly frustrating and disheartening after all the energy the team poured into this. It makes complete sense to feel deflated right now.",
-        true,
-        "Emotional",
-        "CORRECT (Emotional Matching): Directly acknowledges and validates the team's shared disappointment."
-      ],
-      [
-        "B",
-        "Every roadblock is just a stepping stone to success! \ud83c\udf31 Let me know when V2 is ready!",
-        false,
-        "Mismatch",
-        "MISMATCH (Toxic Positivity): Forced cheerfulness after a major setback breeds cynicism."
-      ],
-      [
-        "C",
-        "Here is a Notion guide on agile pivot framework execution.",
-        false,
-        "Mismatch",
-        "MISMATCH (Unsolicited Optimization): Pushing process guides when people are mourning lost work."
-      ],
-      [
-        "D",
-        "Archive the current Figma folder and create folder 'V3_Drafts' immediately.",
-        false,
-        "Practical",
-        "MISMATCH (Practical Overreach): Cold task instructions ignore human morale."
-      ]
+      {
+        "id": "A",
+        "text": "That is incredibly frustrating and disheartening after all the energy the team poured into this. It makes complete sense to feel deflated right now.",
+        "is_correct": true,
+        "response_type": "Emotional",
+        "feedback": "CORRECT (Emotional Matching): Directly acknowledges and validates the team's shared disappointment."
+      },
+      {
+        "id": "B",
+        "text": "Every roadblock is just a stepping stone to success! \ud83c\udf31 Let me know when V2 is ready!",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Toxic Positivity): Forced cheerfulness after a major setback breeds cynicism."
+      },
+      {
+        "id": "C",
+        "text": "Here is a Notion guide on agile pivot framework execution.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Unsolicited Optimization): Pushing process guides when people are mourning lost work."
+      },
+      {
+        "id": "D",
+        "text": "Archive the current Figma folder and create folder 'V3_Drafts' immediately.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Overreach): Cold task instructions ignore human morale."
+      }
     ],
     "core_takeaway": "Acknowledge disappointment and lost effort before trying to rally the team."
   },
@@ -202,34 +202,34 @@
     "context": "Teammate Sam texts: 'Hey, a few of us remote folks are setting up a virtual gaming night this Friday. No pressure at all, just for fun!'",
     "prompt": "Which response best MATCHES Sam's conversation state?",
     "options": [
-      [
-        "A",
-        "Count me in! Sounds like a blast, thanks for inviting me to join the group! \ud83c\udfae",
-        true,
-        "Social",
-        "CORRECT (Social Matching): Matches social warmth and group inclusion."
-      ],
-      [
-        "B",
-        "Can you send me an ROI report on gaming vs team productivity?",
-        false,
-        "Practical",
-        "MISMATCH (Over-Analytical Practical): Treating a social invite like an audit kills social warmth."
-      ],
-      [
-        "C",
-        "I'm way too emotionally exhausted from work to deal with people right now.",
-        false,
-        "Emotional",
-        "MISMATCH (Heavy Emotional Dumping): Dumping heavy emotions onto a casual social invite creates awkwardness."
-      ],
-      [
-        "D",
-        "Video games are statistically proven to reduce sleep quality.",
-        false,
-        "Mismatch",
-        "MISMATCH (Pedantic Mismatch): Being pedantic shuts down camaraderie."
-      ]
+      {
+        "id": "A",
+        "text": "Count me in! Sounds like a blast, thanks for inviting me to join the group! \ud83c\udfae",
+        "is_correct": true,
+        "response_type": "Social",
+        "feedback": "CORRECT (Social Matching): Matches social warmth and group inclusion."
+      },
+      {
+        "id": "B",
+        "text": "Can you send me an ROI report on gaming vs team productivity?",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Over-Analytical Practical): Treating a social invite like an audit kills social warmth."
+      },
+      {
+        "id": "C",
+        "text": "I'm way too emotionally exhausted from work to deal with people right now.",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Heavy Emotional Dumping): Dumping heavy emotions onto a casual social invite creates awkwardness."
+      },
+      {
+        "id": "D",
+        "text": "Video games are statistically proven to reduce sleep quality.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Pedantic Mismatch): Being pedantic shuts down camaraderie."
+      }
     ],
     "core_takeaway": "Match social state invitations with warmth and mutual connection."
   },
@@ -241,34 +241,34 @@
     "context": "Senior Engineer Chris posts in #incident-response: 'Production API latency is 800ms. We need a decision within 5 mins: do we roll back deployment v3.2 or apply hotfix patch #490?'",
     "prompt": "How do you respond to MATCH Chris's state under incident pressure?",
     "options": [
-      [
-        "A",
-        "Apply hotfix patch #490 immediately if staging unit tests pass in 2 mins; otherwise roll back v3.2.",
-        true,
-        "Practical",
-        "CORRECT (Practical Matching): Delivers precise decision logic."
-      ],
-      [
-        "B",
-        "Incidents are so stressful! Stay calm everyone, we'll get through this! \u2764\ufe0f",
-        false,
-        "Emotional",
-        "MISMATCH (Emotional Cheerleading): Emotional cheerleading doesn't fix server latency."
-      ],
-      [
-        "C",
-        "Who approved deployment v3.2 without full load testing?",
-        false,
-        "Mismatch",
-        "MISMATCH (Blame Assignment): Assigning blame during live incident creates fear."
-      ],
-      [
-        "D",
-        "We should plan a team dinner after this incident is resolved.",
-        false,
-        "Social",
-        "MISMATCH (Social Drift): Irrelevant social planning during an outage."
-      ]
+      {
+        "id": "A",
+        "text": "Apply hotfix patch #490 immediately if staging unit tests pass in 2 mins; otherwise roll back v3.2.",
+        "is_correct": true,
+        "response_type": "Practical",
+        "feedback": "CORRECT (Practical Matching): Delivers precise decision logic."
+      },
+      {
+        "id": "B",
+        "text": "Incidents are so stressful! Stay calm everyone, we'll get through this! \u2764\ufe0f",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Emotional Cheerleading): Emotional cheerleading doesn't fix server latency."
+      },
+      {
+        "id": "C",
+        "text": "Who approved deployment v3.2 without full load testing?",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Blame Assignment): Assigning blame during live incident creates fear."
+      },
+      {
+        "id": "D",
+        "text": "We should plan a team dinner after this incident is resolved.",
+        "is_correct": false,
+        "response_type": "Social",
+        "feedback": "MISMATCH (Social Drift): Irrelevant social planning during an outage."
+      }
     ],
     "core_takeaway": "In high-urgency practical scenarios, focus strictly on decision logic."
   },
@@ -280,34 +280,34 @@
     "context": "At the start of a Zoom call, new teammate Chloe mentions: 'I just moved to Seattle last week! Does anyone have favorite coffee spots or neighborhoods to check out?'",
     "prompt": "How do you respond to MATCH Chloe's conversation state?",
     "options": [
-      [
-        "A",
-        "Welcome to Seattle! Storyville Coffee in Pike Place is amazing. I'd love to share a list of great spots!",
-        true,
-        "Social",
-        "CORRECT (Social Matching): Responds with welcoming rapport and connection."
-      ],
-      [
-        "B",
-        "Let's review today's meeting agenda so we stay strictly within our 30-minute block.",
-        false,
-        "Practical",
-        "MISMATCH (Practical Shutdown): Shutting down rapport-building harms team cohesion."
-      ],
-      [
-        "C",
-        "Moving to a new city must be so lonely and nerve-wracking.",
-        false,
-        "Emotional",
-        "MISMATCH (Projected Emotion): Chloe expressed excitement, not distress."
-      ],
-      [
-        "D",
-        "Here is an Excel spreadsheet of Seattle real estate tax brackets.",
-        false,
-        "Mismatch",
-        "MISMATCH (Unsolicited Optimization): Cold administrative data misses the social intent."
-      ]
+      {
+        "id": "A",
+        "text": "Welcome to Seattle! Storyville Coffee in Pike Place is amazing. I'd love to share a list of great spots!",
+        "is_correct": true,
+        "response_type": "Social",
+        "feedback": "CORRECT (Social Matching): Responds with welcoming rapport and connection."
+      },
+      {
+        "id": "B",
+        "text": "Let's review today's meeting agenda so we stay strictly within our 30-minute block.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Shutdown): Shutting down rapport-building harms team cohesion."
+      },
+      {
+        "id": "C",
+        "text": "Moving to a new city must be so lonely and nerve-wracking.",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Projected Emotion): Chloe expressed excitement, not distress."
+      },
+      {
+        "id": "D",
+        "text": "Here is an Excel spreadsheet of Seattle real estate tax brackets.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Unsolicited Optimization): Cold administrative data misses the social intent."
+      }
     ],
     "core_takeaway": "Social conversations focus on identity and connection. Build rapport before agendas."
   },
@@ -319,34 +319,34 @@
     "context": "In a hallway sync 2 minutes before an executive presentation, the VP asks: 'What are the top 2 risks to our product launch next month and what is our backup plan?'",
     "prompt": "How do you respond to MATCH the VP's state?",
     "options": [
-      [
-        "A",
-        "1) QA test coverage (+3 day risk), 2) Vendor SLA delay. Backup is feature-flagged staged rollout.",
-        true,
-        "Practical",
-        "CORRECT (Practical Matching): Crisp, structured, concise operational answer."
-      ],
-      [
-        "B",
-        "We believe in the team's vision and energy! We're going to make magic happen!",
-        false,
-        "Emotional",
-        "MISMATCH (Vague Positivity): Vague cheerleading fails when executive data is requested."
-      ],
-      [
-        "C",
-        "How are you feeling about your workload lately?",
-        false,
-        "Emotional",
-        "MISMATCH (Emotional Misalignment): Asking about personal feelings when a metric is requested."
-      ],
-      [
-        "D",
-        "Let's schedule a 2-hour brainstorming workshop next week.",
-        false,
-        "Mismatch",
-        "MISMATCH (Practical Delay): Proposing long workshops when 2-minute facts are needed."
-      ]
+      {
+        "id": "A",
+        "text": "1) QA test coverage (+3 day risk), 2) Vendor SLA delay. Backup is feature-flagged staged rollout.",
+        "is_correct": true,
+        "response_type": "Practical",
+        "feedback": "CORRECT (Practical Matching): Crisp, structured, concise operational answer."
+      },
+      {
+        "id": "B",
+        "text": "We believe in the team's vision and energy! We're going to make magic happen!",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Vague Positivity): Vague cheerleading fails when executive data is requested."
+      },
+      {
+        "id": "C",
+        "text": "How are you feeling about your workload lately?",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Emotional Misalignment): Asking about personal feelings when a metric is requested."
+      },
+      {
+        "id": "D",
+        "text": "Let's schedule a 2-hour brainstorming workshop next week.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Practical Delay): Proposing long workshops when 2-minute facts are needed."
+      }
     ],
     "core_takeaway": "Deliver crisp structured answers when executive practical decisions are requested."
   },
@@ -358,34 +358,34 @@
     "context": "Close colleague Morgan texts at 9 PM: 'My manager just gave my project lead spot to a new hire who started 2 weeks ago... I don't even know why I try so hard here anymore.'",
     "prompt": "Using Duhigg's framework, which response best MATCHES Morgan's state?",
     "options": [
-      [
-        "A",
-        "That feels like a massive punch in the gut after everything you've given to this team. It sounds like you feel unappreciated and deeply hurt. Am I understanding correctly?",
-        true,
-        "Emotional",
-        "CORRECT (Emotional Match + Looping): Reflects emotional hurt and asks for confirmation."
-      ],
-      [
-        "B",
-        "Update your LinkedIn profile tonight and apply to 10 jobs immediately!",
-        false,
-        "Mismatch",
-        "MISMATCH (Unsolicited Optimization): Rushing to job applications when someone is hurt."
-      ],
-      [
-        "C",
-        "Everything happens for a reason, something better is coming!",
-        false,
-        "Mismatch",
-        "MISMATCH (Toxic Positivity): Cliche platitudes invalidate real disappointment."
-      ],
-      [
-        "D",
-        "What is your current salary band compared to the new hire?",
-        false,
-        "Practical",
-        "MISMATCH (Practical Misalignment): Cold financial queries miss emotional pain."
-      ]
+      {
+        "id": "A",
+        "text": "That feels like a massive punch in the gut after everything you've given to this team. It sounds like you feel unappreciated and deeply hurt. Am I understanding correctly?",
+        "is_correct": true,
+        "response_type": "Emotional",
+        "feedback": "CORRECT (Emotional Match + Looping): Reflects emotional hurt and asks for confirmation."
+      },
+      {
+        "id": "B",
+        "text": "Update your LinkedIn profile tonight and apply to 10 jobs immediately!",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to job applications when someone is hurt."
+      },
+      {
+        "id": "C",
+        "text": "Everything happens for a reason, something better is coming!",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Toxic Positivity): Cliche platitudes invalidate real disappointment."
+      },
+      {
+        "id": "D",
+        "text": "What is your current salary band compared to the new hire?",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Misalignment): Cold financial queries miss emotional pain."
+      }
     ],
     "core_takeaway": "Reflect emotional pain before rushing to career action steps."
   },
