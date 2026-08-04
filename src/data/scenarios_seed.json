@@ -1,18 +1,16 @@
 [
   {
-    "scenario_id": "9249b984-d288-4046-b31b-de7d83a1bdd2",
     "channel": "Slack",
     "conversation_type": "Emotional",
-    "difficulty_level": 3,
-    "context": "In #design-critique at 7:30 PM, Marcus posts: 'Just spent 4 hours adjusting padding based on stakeholder feedback, only for them to ask why we aren't using the v1 layout from last month. I feel like my work here is completely invisible.'",
-    "prompt": "How do you respond to MATCH Marcus's current conversation state?",
+    "context": "In #dev-lounge at 7:30 PM, Marcus posts: 'Just spent 4 hours adjusting padding based on stakeholder feedback, only for them to ask why we aren't using the v1 layout from last month. I feel like my work here is completely invisible.'",
+    "prompt": "How do you respond to Marcus to MATCH his current conversation state?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that pouring hours into revisions only to have feedback reset feels deeply frustrating and invalidating. Is that right?",
+        "text": "Ugh, spending 4 hours on revisions just to have them pivot right back to v1 is the absolute worst. That sounds so exhausting and demoralizing. Is that how it feels?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects his feelings of frustration and invisibility, asking for confirmation."
+        "feedback": "CORRECT (Natural Emotional Match + Looping): Validates his exhaustion naturally and asks a confirmation question without sounding like a textbook therapy bot."
       },
       {
         "id": "B",
@@ -36,40 +34,75 @@
         "feedback": "MISMATCH (Practical Overreach): Solves the file state without connecting with the human."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion before offering workflow fixes or file tweaks."
+    "core_takeaway": "Validate emotional exhaustion naturally before offering workflow fixes or file tweaks."
   },
   {
-    "scenario_id": "b923b1ba-4bc4-439c-843d-b3cd613fa0a2",
+    "channel": "In-Person",
+    "conversation_type": "Emotional",
+    "context": "In a 1-on-1 coffee chat, your direct report Maya leans back and sighs: 'I've worked 60-hour weeks for 3 months straight, but in our calibration call my manager said I need to improve my executive presence. I feel like nothing I do is ever enough.'",
+    "prompt": "Which response best MATCHES Maya's state using natural active listening?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Man, pouring your absolute max energy into work and then getting hit with vague feedback feels like such a punch in the gut. Does that capture how you're feeling?",
+        "is_correct": true,
+        "response_type": "Emotional",
+        "feedback": "CORRECT (Natural Emotional Match): Speaks naturally while summarizing her emotional core and asking for confirmation."
+      },
+      {
+        "id": "B",
+        "text": "You should take a public speaking course on LinkedIn Learning to boost your executive presence score.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving course recommendations invalidates her emotional hurt."
+      },
+      {
+        "id": "C",
+        "text": "Managers are under a lot of pressure right now, try not to take it personally!",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Defense / Toxic Positivity): Defending management shuts down open vulnerability."
+      },
+      {
+        "id": "D",
+        "text": "Let's review your slide deck format to make sure your presentation fonts look executive.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Overreach): Focusing on fonts when someone feels inadequate."
+      }
+    ],
+    "core_takeaway": "Reflect emotional pain in natural language before offering performance advice."
+  },
+  {
     "channel": "iMessage",
     "conversation_type": "Social",
-    "difficulty_level": 3,
-    "context": "Work friend Sarah texts: 'Hey, noticed you seemed a bit quiet when Alex was dividing up the client leads during the regional sync. You were original lead on the West territory\u2014are you feeling okay with how team status was handled?'",
+    "context": "Work friend Sarah texts: 'Hey, noticed you stayed pretty quiet when Alex took credit for the West region client deck in the sync. You spent 20 hours on those slides. Are you okay or just letting it slide?'",
     "prompt": "How do you respond to Sarah to MATCH her relational/social state?",
     "options": [
       {
         "id": "A",
-        "text": "Honestly, it felt pretty uncomfortable to watch. It sounds like you're checking in on how I feel about fairness and status in our team. I really appreciate you reaching out.",
+        "text": "Honestly, it was so frustrating to sit there and watch that happen. I really appreciate you reaching out and checking in on me about it. That meant a lot.",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Validates Sarah's social check-in, acknowledges the status dynamic, and strengthens peer trust."
+        "feedback": "CORRECT (Natural Social Match): Acknowledges the peer relationship, validates the group status concern, and builds real trust."
       },
       {
         "id": "B",
-        "text": "I will file a territory dispute ticket with Sales Operations tomorrow morning.",
+        "text": "I will file a formal territory dispute ticket with Sales Operations tomorrow morning.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Overreach): Escalating to administrative tickets misses the warm social check-in."
       },
       {
         "id": "C",
-        "text": "It's no big deal at all! Everything happens for a reason! \ud83d\ude0a",
+        "text": "It's no big deal at all! Karma always wins in the end! \ud83d\ude0a\u2728",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Toxic Positivity): Brushing off team status dynamics shuts down supportive dialogue."
       },
       {
         "id": "D",
-        "text": "Alex is just an aggressive territory thief, don't trust him.",
+        "text": "Alex is just an insecure thief, I'm going to ruin his reputation.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Destructive Venting): Personal attacks create toxicity rather than social alignment."
@@ -78,16 +111,14 @@
     "core_takeaway": "Social conversations around identity and status require acknowledging relationship cues and peer trust."
   },
   {
-    "scenario_id": "78f4fe18-653f-4cb5-9a6c-67c6c800d054",
     "channel": "Zoom",
     "conversation_type": "Practical",
-    "difficulty_level": 3,
     "context": "During a live product demo on Zoom, Lead Engineer Priya private messages you: 'The payment gateway staging API just threw a 502 Bad Gateway error. Do I stall the client with a 5-minute Q&A block while you reset the pod, or do we switch to static video recording now?'",
     "prompt": "How do you respond to MATCH Priya's state under tight time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Switch to static video recording immediately. I will reset the staging pod silently in parallel.",
+        "text": "Switch to static video recording right now. I'll reset the staging pod silently in the background.",
         "is_correct": true,
         "response_type": "Practical",
         "feedback": "CORRECT (Practical Matching): Delivers an instantaneous, clear operational decision matching her time-critical request."
@@ -117,58 +148,17 @@
     "core_takeaway": "Practical conversations demand quick, precise, actionable decisions."
   },
   {
-    "scenario_id": "b8831735-5b72-4e4e-bd57-3e1b116929a2",
-    "channel": "In-Person",
-    "conversation_type": "Emotional",
-    "difficulty_level": 3,
-    "context": "In a 1-on-1 coffee chat, your direct report Maya leans back and sighs: 'I've worked 60-hour weeks for 3 months straight, but in our calibration call my manager said I need to improve my 'executive presence'. I feel like nothing I do is ever enough.'",
-    "prompt": "Using Duhigg's 'Looping for Understanding' technique, which response best matches Maya's state?",
-    "options": [
-      {
-        "id": "A",
-        "text": "What I'm hearing is that giving your absolute max energy and then being hit with vague feedback makes you feel deeply exhausted and unappreciated. Is that right?",
-        "is_correct": true,
-        "response_type": "Emotional",
-        "feedback": "CORRECT (Looping for Understanding): Summarizes her emotional core and asks 'Is that right?' to confirm."
-      },
-      {
-        "id": "B",
-        "text": "You should take a public speaking course on LinkedIn Learning to boost your executive presence score.",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Giving course recommendations invalidates her emotional hurt."
-      },
-      {
-        "id": "C",
-        "text": "Managers are under a lot of pressure right now, try not to take it personally!",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Defense / Toxic Positivity): Defending management shuts down open vulnerability."
-      },
-      {
-        "id": "D",
-        "text": "Let's review your slide deck format to make sure your presentation fonts look executive.",
-        "is_correct": false,
-        "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Focusing on fonts when someone feels inadequate."
-      }
-    ],
-    "core_takeaway": "Looping requires 3 steps: Listen, Reflect emotional core, and Ask for confirmation ('Is that right?')."
-  },
-  {
-    "scenario_id": "adae84d8-361e-4de0-956a-ce1cf3d1d7dd",
     "channel": "Slack",
     "conversation_type": "Emotional",
-    "difficulty_level": 3,
     "context": "In #marketing-team at 6:45 PM, Jordan posts: 'Our campaign launch got pushed back for the 3rd time this month because leadership changed direction again. 3 weeks of work down the drain.'",
     "prompt": "How do you respond to MATCH Jordan's conversation state?",
     "options": [
       {
         "id": "A",
-        "text": "That is incredibly frustrating and disheartening after all the energy the team poured into this. It makes complete sense to feel deflated right now.",
+        "text": "That is so incredibly demoralizing after how hard the team worked on this. It makes total sense why everyone is feeling deflated right now.",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Matching): Directly acknowledges and validates the team's shared disappointment."
+        "feedback": "CORRECT (Natural Emotional Match): Directly acknowledges and validates the team's shared disappointment without artificial jargon."
       },
       {
         "id": "B",
@@ -195,303 +185,69 @@
     "core_takeaway": "Acknowledge disappointment and lost effort before trying to rally the team."
   },
   {
-    "scenario_id": "875f5fe8-5b6a-49e9-b260-92d43a634059",
-    "channel": "iMessage",
-    "conversation_type": "Social",
-    "difficulty_level": 3,
-    "context": "Teammate Sam texts: 'Hey, a few of us remote folks are setting up a virtual gaming night this Friday. No pressure at all, just for fun!'",
-    "prompt": "Which response best MATCHES Sam's conversation state?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Count me in! Sounds like a blast, thanks for inviting me to join the group! \ud83c\udfae",
-        "is_correct": true,
-        "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Matches social warmth and group inclusion."
-      },
-      {
-        "id": "B",
-        "text": "Can you send me an ROI report on gaming vs team productivity?",
-        "is_correct": false,
-        "response_type": "Practical",
-        "feedback": "MISMATCH (Over-Analytical Practical): Treating a social invite like an audit kills social warmth."
-      },
-      {
-        "id": "C",
-        "text": "I'm way too emotionally exhausted from work to deal with people right now.",
-        "is_correct": false,
-        "response_type": "Emotional",
-        "feedback": "MISMATCH (Heavy Emotional Dumping): Dumping heavy emotions onto a casual social invite creates awkwardness."
-      },
-      {
-        "id": "D",
-        "text": "Video games are statistically proven to reduce sleep quality.",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Pedantic Mismatch): Being pedantic shuts down camaraderie."
-      }
-    ],
-    "core_takeaway": "Match social state invitations with warmth and mutual connection."
-  },
-  {
-    "scenario_id": "99fd7b2a-02e2-4543-a41f-9b94671a288b",
-    "channel": "Slack",
-    "conversation_type": "Practical",
-    "difficulty_level": 3,
-    "context": "Senior Engineer Chris posts in #incident-response: 'Production API latency is 800ms. We need a decision within 5 mins: do we roll back deployment v3.2 or apply hotfix patch #490?'",
-    "prompt": "How do you respond to MATCH Chris's state under incident pressure?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Apply hotfix patch #490 immediately if staging unit tests pass in 2 mins; otherwise roll back v3.2.",
-        "is_correct": true,
-        "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers precise decision logic."
-      },
-      {
-        "id": "B",
-        "text": "Incidents are so stressful! Stay calm everyone, we'll get through this! \u2764\ufe0f",
-        "is_correct": false,
-        "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Cheerleading): Emotional cheerleading doesn't fix server latency."
-      },
-      {
-        "id": "C",
-        "text": "Who approved deployment v3.2 without full load testing?",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Blame Assignment): Assigning blame during live incident creates fear."
-      },
-      {
-        "id": "D",
-        "text": "We should plan a team dinner after this incident is resolved.",
-        "is_correct": false,
-        "response_type": "Social",
-        "feedback": "MISMATCH (Social Drift): Irrelevant social planning during an outage."
-      }
-    ],
-    "core_takeaway": "In high-urgency practical scenarios, focus strictly on decision logic."
-  },
-  {
-    "scenario_id": "2ce4e672-c8e4-4501-b3fa-7dde6f77b86c",
-    "channel": "Zoom",
-    "conversation_type": "Social",
-    "difficulty_level": 3,
-    "context": "At the start of a Zoom call, new teammate Chloe mentions: 'I just moved to Seattle last week! Does anyone have favorite coffee spots or neighborhoods to check out?'",
-    "prompt": "How do you respond to MATCH Chloe's conversation state?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Welcome to Seattle! Storyville Coffee in Pike Place is amazing. I'd love to share a list of great spots!",
-        "is_correct": true,
-        "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Responds with welcoming rapport and connection."
-      },
-      {
-        "id": "B",
-        "text": "Let's review today's meeting agenda so we stay strictly within our 30-minute block.",
-        "is_correct": false,
-        "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Shutdown): Shutting down rapport-building harms team cohesion."
-      },
-      {
-        "id": "C",
-        "text": "Moving to a new city must be so lonely and nerve-wracking.",
-        "is_correct": false,
-        "response_type": "Emotional",
-        "feedback": "MISMATCH (Projected Emotion): Chloe expressed excitement, not distress."
-      },
-      {
-        "id": "D",
-        "text": "Here is an Excel spreadsheet of Seattle real estate tax brackets.",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Cold administrative data misses the social intent."
-      }
-    ],
-    "core_takeaway": "Social conversations focus on identity and connection. Build rapport before agendas."
-  },
-  {
-    "scenario_id": "c90d478b-04c2-49a0-8b20-150c22d2127c",
-    "channel": "In-Person",
-    "conversation_type": "Practical",
-    "difficulty_level": 3,
-    "context": "In a hallway sync 2 minutes before an executive presentation, the VP asks: 'What are the top 2 risks to our product launch next month and what is our backup plan?'",
-    "prompt": "How do you respond to MATCH the VP's state?",
-    "options": [
-      {
-        "id": "A",
-        "text": "1) QA test coverage (+3 day risk), 2) Vendor SLA delay. Backup is feature-flagged staged rollout.",
-        "is_correct": true,
-        "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Crisp, structured, concise operational answer."
-      },
-      {
-        "id": "B",
-        "text": "We believe in the team's vision and energy! We're going to make magic happen!",
-        "is_correct": false,
-        "response_type": "Emotional",
-        "feedback": "MISMATCH (Vague Positivity): Vague cheerleading fails when executive data is requested."
-      },
-      {
-        "id": "C",
-        "text": "How are you feeling about your workload lately?",
-        "is_correct": false,
-        "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Misalignment): Asking about personal feelings when a metric is requested."
-      },
-      {
-        "id": "D",
-        "text": "Let's schedule a 2-hour brainstorming workshop next week.",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Practical Delay): Proposing long workshops when 2-minute facts are needed."
-      }
-    ],
-    "core_takeaway": "Deliver crisp structured answers when executive practical decisions are requested."
-  },
-  {
-    "scenario_id": "7a57b0fc-f393-48f2-aba4-971955d753c2",
-    "channel": "iMessage",
-    "conversation_type": "Emotional",
-    "difficulty_level": 3,
-    "context": "Close colleague Morgan texts at 9 PM: 'My manager just gave my project lead spot to a new hire who started 2 weeks ago... I don't even know why I try so hard here anymore.'",
-    "prompt": "Using Duhigg's framework, which response best MATCHES Morgan's state?",
-    "options": [
-      {
-        "id": "A",
-        "text": "That feels like a massive punch in the gut after everything you've given to this team. It sounds like you feel unappreciated and deeply hurt. Am I understanding correctly?",
-        "is_correct": true,
-        "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects emotional hurt and asks for confirmation."
-      },
-      {
-        "id": "B",
-        "text": "Update your LinkedIn profile tonight and apply to 10 jobs immediately!",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to job applications when someone is hurt."
-      },
-      {
-        "id": "C",
-        "text": "Everything happens for a reason, something better is coming!",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cliche platitudes invalidate real disappointment."
-      },
-      {
-        "id": "D",
-        "text": "What is your current salary band compared to the new hire?",
-        "is_correct": false,
-        "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Misalignment): Cold financial queries miss emotional pain."
-      }
-    ],
-    "core_takeaway": "Reflect emotional pain before rushing to career action steps."
-  },
-  {
-    "scenario_id": "cf591159-8dfe-43ca-aeba-7bebbbd2226b",
-    "channel": "Slack",
-    "conversation_type": "Emotional",
-    "difficulty_level": 3,
-    "context": "In a Slack interaction regarding 'Managing remote team isolation during Q4 crunch', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
-    "options": [
-      {
-        "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
-        "is_correct": true,
-        "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
-      },
-      {
-        "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
-      },
-      {
-        "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
-        "is_correct": false,
-        "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
-      },
-      {
-        "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
-        "is_correct": false,
-        "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
-      }
-    ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
-  },
-  {
-    "scenario_id": "d4d161f6-9da8-422c-8e3e-dac88634d893",
+    "scenario_id": "eadc9828-aec5-4c50-9ba9-182aaaa99d88",
     "channel": "iMessage",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent iMessage sync regarding 'Handling unexpected scope creep from VP request', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a iMessage discussion on 'Handling unexpected scope creep from executive request', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "3cc08607-f452-4266-8cd6-a92a8bcaf4e9",
+    "scenario_id": "80d6b916-0508-4e90-a356-aca9f3daa8d5",
     "channel": "In-Person",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a In-Person setting regarding 'Navigating awkward salary transparency discussion', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a In-Person conversation about 'Navigating awkward salary transparency discussion', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -504,111 +260,111 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "666d1bdb-d964-430f-9aa0-4c707e5ab426",
+    "scenario_id": "feb54256-a263-469c-a55a-2af26c7099d1",
     "channel": "Zoom",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Zoom sync regarding 'Dealing with conflicting priorities between Product and Design', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Zoom discussion on 'Dealing with conflicting priorities between Product and Design', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "3c87968d-6bbc-4f98-a737-0bc69d329c72",
+    "scenario_id": "c09117e2-3825-4276-ad1b-6e7336611194",
     "channel": "Slack",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a Slack interaction regarding 'Responding to a teammate whose presentation was criticized publicly', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a Slack exchange about 'Responding to a teammate whose presentation was criticized publicly', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "f73951ce-7748-470e-a856-7eddf6f453f9",
+    "scenario_id": "0e50ca58-6abd-45c5-abb8-de9fed947d1e",
     "channel": "In-Person",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a In-Person setting regarding 'Handling a peer who constantly interrupts in team syncs', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a In-Person conversation about 'Handling a peer who constantly interrupts in team syncs', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -621,111 +377,111 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "5218858d-7102-4b02-9773-1c1ff35fc2e5",
+    "scenario_id": "0f2150d2-3761-4b11-b4a6-a155c1517d87",
     "channel": "Slack",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Slack sync regarding 'Responding to a urgent client SLA breach notification', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Slack discussion on 'Responding to an urgent client SLA breach notification', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "c897cc99-b5f6-481e-9dcc-d98370d4a01e",
+    "scenario_id": "efc2710e-1880-44df-934c-215cbe197910",
     "channel": "Zoom",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a Zoom interaction regarding 'Managing feelings of imposter syndrome after a promotion', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a Zoom exchange about 'Managing feelings of imposter syndrome after a promotion', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "c8f3c156-5ab3-45e4-bcaa-f1447566346f",
+    "scenario_id": "7d0a6da5-2743-4e8e-8ec1-75f81832c1fb",
     "channel": "iMessage",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a iMessage setting regarding 'Navigating hybrid office seating arrangement tensions', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a iMessage conversation about 'Navigating hybrid office seating arrangement tensions', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -738,150 +494,150 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "a91b5bea-c46e-4d54-9a21-2164dabb46a3",
+    "scenario_id": "ebcc7f6a-f2f4-45cf-9695-f7687bd225ab",
     "channel": "In-Person",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a In-Person interaction regarding 'Dealing with last-minute budget cuts on a favorite project', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a In-Person exchange about 'Dealing with last-minute budget cuts on a key project', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "315ec028-2d91-408e-af91-391fc4c6d218",
+    "scenario_id": "9f3f1dc1-ce96-4231-b628-6d9d231c18d6",
     "channel": "Slack",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Slack sync regarding 'Handling a missed deadline due to vendor outage', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Slack discussion on 'Handling a missed deadline due to vendor outage', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "64db19d4-4c66-46ec-abfe-4ce7d4e92ac3",
+    "scenario_id": "6d12d468-56f0-4acf-b835-0e18f1daf217",
     "channel": "iMessage",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a iMessage interaction regarding 'Responding to a colleague taking medical leave', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a iMessage exchange about 'Responding to a colleague taking medical leave', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "717d7410-b223-4d66-bdad-690d02757434",
+    "scenario_id": "265eddf8-93e8-4169-b7fc-476cddd5778b",
     "channel": "Zoom",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a Zoom setting regarding 'Managing team recognition when 1 person did 80% of work', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a Zoom conversation about 'Managing team recognition when 1 person did 80% of work', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -894,150 +650,150 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "b9cc5135-91b7-4641-ae2f-62c85f3fba03",
+    "scenario_id": "746e9a72-b064-4ac2-b841-7133d7731311",
     "channel": "Slack",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a Slack interaction regarding 'Handling sudden re-org announcements across departments', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a Slack exchange about 'Handling sudden re-org announcements across departments', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "287ecb15-db8e-4f71-929a-066e8e60207a",
+    "scenario_id": "c9554a03-3d69-4c40-8aaf-4a89f73ad8eb",
     "channel": "iMessage",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent iMessage sync regarding 'Responding to a request for weekend emergency work', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a iMessage discussion on 'Responding to a request for weekend emergency work', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "cea06c3c-bc53-4f20-8a6b-7705a561992e",
+    "scenario_id": "7cc5fd73-f54f-4510-a62b-6ab5f47540df",
     "channel": "Slack",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Slack sync regarding 'Navigating feedback on code review style', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Slack discussion on 'Navigating feedback on code review style', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "8ded48d6-2c8c-4feb-9e16-610b4354213d",
+    "scenario_id": "34577de9-f026-4df1-82e6-0768c9e08ada",
     "channel": "In-Person",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a In-Person setting regarding 'Handling a colleague feeling excluded from informal happy hours', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a In-Person conversation about 'Handling a colleague feeling excluded from informal happy hours', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -1050,111 +806,111 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "642289d7-d202-453f-b220-81fe2a087777",
+    "scenario_id": "2d182d8d-8082-460c-9108-61da4bcecb15",
     "channel": "Zoom",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a Zoom interaction regarding 'Responding to an unexpected negative client review', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a Zoom exchange about 'Responding to an unexpected negative client review', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "41ce6eea-b0ce-4c50-8462-01794c56e76d",
+    "scenario_id": "ae92e14d-b4b1-4c34-bdfd-208af18221ea",
     "channel": "Slack",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Slack sync regarding 'Managing priority shift from feature dev to tech debt cleanup', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Slack discussion on 'Managing priority shift from feature dev to tech debt cleanup', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "e0ee0113-0266-4e24-846e-b42ab35bdcc4",
+    "scenario_id": "37d6a3f0-f926-414b-8e5a-c8c6f7367aec",
     "channel": "In-Person",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a In-Person setting regarding 'Navigating mentor-mentee relationship expectations', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a In-Person conversation about 'Navigating mentor-mentee relationship expectations', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -1167,111 +923,111 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "21d2e85a-71a1-4b5b-affe-4eabda9c8d5a",
+    "scenario_id": "c7f59929-b93b-43d2-9b19-6c3d3fcf2283",
     "channel": "Slack",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a Slack interaction regarding 'Handling burnout after major system migration', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a Slack exchange about 'Handling burnout after major system migration', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "0a6548bb-7acd-424d-878b-431246edeae2",
+    "scenario_id": "02f6916e-73bd-472d-a186-f6151d9245bb",
     "channel": "iMessage",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent iMessage sync regarding 'Responding to request for immediate data export before pitch', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a iMessage discussion on 'Responding to request for immediate data export before pitch', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "dd6342f9-2b92-46b5-be05-89bdb85c9e6f",
+    "scenario_id": "cc09105b-46ed-4218-ab66-6c539e8157b6",
     "channel": "Zoom",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a Zoom setting regarding 'Managing team culture differences after company merger', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a Zoom conversation about 'Managing team culture differences after company merger', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -1284,111 +1040,111 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "322102f7-b893-49f2-9fa9-eb462eb2e300",
+    "scenario_id": "0444fb94-c080-4a6d-8ef6-3f3cf2fa7cde",
     "channel": "In-Person",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent In-Person sync regarding 'Handling miscommunication about project ownership', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a In-Person discussion on 'Handling miscommunication about project ownership', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "2c8e1ab9-26fe-40d1-b428-f44a9ade0182",
+    "scenario_id": "92d6c78d-4462-47bf-a2fd-69306f2def84",
     "channel": "Zoom",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a Zoom interaction regarding 'Responding to a direct report struggling with work-life balance', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a Zoom exchange about 'Responding to a direct report struggling with work-life balance', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "521058bb-998f-4e0b-8b01-666537067dd0",
+    "scenario_id": "a87260eb-db3b-437a-baee-a41d67d3a859",
     "channel": "Slack",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a Slack setting regarding 'Navigating cross-functional department rivalry', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a Slack conversation about 'Navigating cross-functional department rivalry', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -1401,111 +1157,111 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "e312e456-848b-427b-ac53-4d50e3b233d4",
+    "scenario_id": "937ced3a-dc61-4a76-99ac-064ef9f3f1b3",
     "channel": "Slack",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Slack sync regarding 'Handling sudden feature freeze decision by leadership', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Slack discussion on 'Handling sudden feature freeze decision by leadership', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "33d19131-9c7b-41ff-aec5-8321b57fa981",
+    "scenario_id": "65072586-88a6-4068-a25e-22ddac721312",
     "channel": "iMessage",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a iMessage interaction regarding 'Responding to a coworker facing personal family loss', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a iMessage exchange about 'Responding to a coworker facing personal family loss', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "b3e6343a-c26e-4efe-a739-eaa6572f3593",
+    "scenario_id": "6543ab04-d6ce-4423-864b-608d9aa85b40",
     "channel": "In-Person",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a In-Person setting regarding 'Managing public praise vs private feedback preferences', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a In-Person conversation about 'Managing public praise vs private feedback preferences', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -1518,111 +1274,111 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "fca91e60-8c28-4fce-9183-cc5fc13a375f",
+    "scenario_id": "1a0907bb-45f6-4555-85f6-4cfcc88eeddd",
     "channel": "Slack",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Slack sync regarding 'Handling urgent security vulnerability patch deployment', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Slack discussion on 'Handling urgent security vulnerability patch deployment', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "2eda3aa1-ef31-4a70-acf4-272a4ed25971",
+    "scenario_id": "8aefd877-b19d-4a84-809d-d1aa1e8af422",
     "channel": "Slack",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a Slack interaction regarding 'Responding to team frustration over complex Jira workflows', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a Slack exchange about 'Responding to team frustration over complex Jira workflows', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "e6ada23d-17f4-422e-9c7a-ec0983d166b3",
+    "scenario_id": "a8fd4c05-f37b-4a00-bd7e-503684937d31",
     "channel": "In-Person",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a In-Person setting regarding 'Navigating casual lunch invitation etiquette with executives', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a In-Person conversation about 'Navigating casual lunch invitation etiquette with executives', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -1635,150 +1391,150 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "ba3f8b26-cd7e-4c6f-945a-02b9e18935e9",
+    "scenario_id": "4c98823a-cb39-4e4c-8fb3-1fa958ff4721",
     "channel": "Zoom",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Zoom sync regarding 'Handling unexpected API deprecation by third-party vendor', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Zoom discussion on 'Handling unexpected API deprecation by third-party vendor', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "de7178e8-a27b-457e-b081-f081861a7d0f",
+    "scenario_id": "b65b5eca-d4f6-4919-8b1f-4501962473b7",
     "channel": "iMessage",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a iMessage interaction regarding 'Responding to a colleague feeling overlooked for mentorship role', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a iMessage exchange about 'Responding to a colleague feeling overlooked for mentorship role', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "4742ed1a-c59b-42b6-a1a4-228e59e32fa9",
+    "scenario_id": "a2db6341-8677-48c7-aafb-4b999b3031e9",
     "channel": "Slack",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Slack sync regarding 'Managing remote team timezone coordination friction', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Slack discussion on 'Managing remote team timezone coordination friction', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "1c6f75cc-3a1e-4f4d-bf1e-cccc9c5a285c",
+    "scenario_id": "cb13a0b9-b7a9-476b-83a2-cc6e5835241b",
     "channel": "Zoom",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a Zoom setting regarding 'Handling identity representation discussions in company town hall', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a Zoom conversation about 'Handling identity representation discussions in company town hall', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -1791,111 +1547,111 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "7b39609c-35e2-4641-8513-202c83ffb0b4",
+    "scenario_id": "07b4d9a4-9c7a-48a1-8147-7c88cb6eaf5f",
     "channel": "In-Person",
     "conversation_type": "Emotional",
     "difficulty_level": 3,
-    "context": "In a In-Person interaction regarding 'Responding to performance PIP notification anxiety', a colleague confides: 'I've been trying so hard to stay afloat, but every time we get momentum, another unexpected obstacle resets our progress. I feel exhausted and doubt if my contributions matter.'",
-    "prompt": "How do you respond to MATCH their emotional conversation state according to Duhigg's framework?",
+    "context": "In a In-Person exchange about 'Responding to performance PIP notification anxiety', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
     "options": [
       {
         "id": "A",
-        "text": "What I'm hearing is that working tirelessly only to face constant resets makes you feel deeply exhausted and unappreciated. Is that right?",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
         "is_correct": true,
         "response_type": "Emotional",
-        "feedback": "CORRECT (Emotional Match + Looping): Reflects their emotional pain and asks for confirmation ('Is that right?')."
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
       },
       {
         "id": "B",
-        "text": "You should read atomic habits and set up a daily task tracking workflow in Notion.",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Unsolicited Optimization): Rushing to task guides invalidates their feelings."
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
       },
       {
         "id": "C",
-        "text": "Don't worry! Everything will work out great in the end, just stay positive! \ud83c\udf1f",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Toxic Positivity): Cheerleading invalidates real exhaustion."
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
       },
       {
         "id": "D",
-        "text": "Send me the project files and I will finish the remaining tasks tonight.",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
         "is_correct": false,
         "response_type": "Practical",
-        "feedback": "MISMATCH (Practical Overreach): Jumping straight to task completion skips emotional connection."
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
       }
     ],
-    "core_takeaway": "Validate emotional exhaustion and reflect feelings before proposing fixes."
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   },
   {
-    "scenario_id": "68fe58b7-ab63-4019-88a6-a2479b2716eb",
+    "scenario_id": "40b8be96-c566-42bc-bf2b-3417cd9f6996",
     "channel": "Slack",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent Slack sync regarding 'Managing architecture design review disagreements', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a Slack discussion on 'Managing architecture design review disagreements', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
   },
   {
-    "scenario_id": "44cd201c-12c5-48ce-967f-d2604e6cbeb8",
+    "scenario_id": "f1b4e69b-b7f5-4e70-bf18-dde6f86ccb4d",
     "channel": "In-Person",
     "conversation_type": "Social",
     "difficulty_level": 3,
-    "context": "In a In-Person setting regarding 'Navigating coffee break informal networking etiquette', a team member remarks: 'It's really nice seeing how our group has built such strong mutual trust despite being spread across different cities. Great working with you all!'",
-    "prompt": "How do you respond to MATCH their social/relational conversation state?",
+    "context": "In a In-Person conversation about 'Navigating coffee break informal networking etiquette', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
     "options": [
       {
         "id": "A",
-        "text": "I completely agree! Building authentic connection across distance makes a huge difference. Really glad to be on this team with you!",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
         "is_correct": true,
         "response_type": "Social",
-        "feedback": "CORRECT (Social Matching): Reciprocates warmth, validates group identity, and strengthens team rapport."
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
       },
       {
         "id": "B",
-        "text": "Please log your remote working location in the HR compliance portal by 5 PM.",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
         "is_correct": false,
         "response_type": "Practical",
         "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
       },
       {
         "id": "C",
-        "text": "Remote teams have a 25% lower engagement rate according to recent surveys.",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
         "is_correct": false,
         "response_type": "Mismatch",
         "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
@@ -1908,45 +1664,279 @@
         "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
       }
     ],
-    "core_takeaway": "Social state interactions require reciprocating warmth and reinforcing group identity."
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
   },
   {
-    "scenario_id": "42475607-dded-4206-abd0-913322953e6c",
+    "scenario_id": "60fb5eb7-3494-455f-9bfa-2ebb6df83973",
     "channel": "iMessage",
     "conversation_type": "Practical",
     "difficulty_level": 3,
-    "context": "During an urgent iMessage sync regarding 'Handling emergency server hardware replacement protocol', a team lead asks: 'We have 10 minutes before the executive call. What are our 2 primary mitigation options and what is the recommended pick?'",
-    "prompt": "How do you respond to MATCH their practical conversation state under time pressure?",
+    "context": "During a iMessage discussion on 'Handling emergency server hardware replacement protocol', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
     "options": [
       {
         "id": "A",
-        "text": "Option 1: Deploy fallback build (5 min execution). Option 2: Pause queue. Recommended: Deploy fallback build.",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
         "is_correct": true,
         "response_type": "Practical",
-        "feedback": "CORRECT (Practical Matching): Delivers structured, crisp, actionable decision data."
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
       },
       {
         "id": "B",
-        "text": "Take a deep breath! We are an amazing team and we will get through this call together!",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Emotional Pep-Talk): Pep talks during time-critical calls delay decisions."
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
       },
       {
         "id": "C",
-        "text": "We should schedule a post-incident retrospective next week to discuss team communication.",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
         "is_correct": false,
         "response_type": "Mismatch",
-        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is requested."
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
       },
       {
         "id": "D",
-        "text": "I get so stressed when executive presentations happen unexpectedly!",
+        "text": "I get so anxious when presentations happen on short notice!",
         "is_correct": false,
         "response_type": "Emotional",
-        "feedback": "MISMATCH (Self-Centered Emotion): Projecting your stress onto someone seeking facts."
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
       }
     ],
-    "core_takeaway": "Practical queries under time pressure require clear, structured, actionable choices."
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
+  },
+  {
+    "scenario_id": "33b15e7f-aa61-4325-b3cf-11b873a259f2",
+    "channel": "Slack",
+    "conversation_type": "Emotional",
+    "difficulty_level": 3,
+    "context": "In a Slack exchange about 'Managing remote sprint retro complaints about meeting fatigue', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
+    "options": [
+      {
+        "id": "A",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
+        "is_correct": true,
+        "response_type": "Emotional",
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
+      },
+      {
+        "id": "B",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
+      },
+      {
+        "id": "C",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
+      },
+      {
+        "id": "D",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
+      }
+    ],
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
+  },
+  {
+    "scenario_id": "ac1d37e7-1161-4b6e-86a4-a80b52a01da2",
+    "channel": "Zoom",
+    "conversation_type": "Practical",
+    "difficulty_level": 3,
+    "context": "During a Zoom discussion on 'Dealing with conflicting feedback from two co-founders', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
+        "is_correct": true,
+        "response_type": "Practical",
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
+      },
+      {
+        "id": "B",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
+      },
+      {
+        "id": "C",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
+      },
+      {
+        "id": "D",
+        "text": "I get so anxious when presentations happen on short notice!",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
+      }
+    ],
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
+  },
+  {
+    "scenario_id": "e55c70a4-56ab-40f0-8b94-5e78f3116a85",
+    "channel": "In-Person",
+    "conversation_type": "Social",
+    "difficulty_level": 3,
+    "context": "In a In-Person conversation about 'Handling awkward mispronunciation of a colleague's name', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
+    "options": [
+      {
+        "id": "A",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
+        "is_correct": true,
+        "response_type": "Social",
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
+      },
+      {
+        "id": "B",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
+      },
+      {
+        "id": "C",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
+      },
+      {
+        "id": "D",
+        "text": "Are you feeling burnt out by the time zone differences?",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
+      }
+    ],
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
+  },
+  {
+    "scenario_id": "a5520073-f07b-4812-ae9e-a9ac8175ad35",
+    "channel": "Slack",
+    "conversation_type": "Social",
+    "difficulty_level": 3,
+    "context": "In a Slack conversation about 'Responding to a colleague feeling alienated by inside jokes', a colleague says: 'It's really awesome how our team has built such genuine trust despite working from different cities. Really glad to be working with you!'",
+    "prompt": "How do you respond to MATCH their social/relational state?",
+    "options": [
+      {
+        "id": "A",
+        "text": "I totally agree! Having real connection across remote teams makes work so much better. Really glad we're working together!",
+        "is_correct": true,
+        "response_type": "Social",
+        "feedback": "CORRECT (Social Matching): Reciprocates warmth and reinforces group identity in natural language."
+      },
+      {
+        "id": "B",
+        "text": "Please update your remote working location in HR self-service by 5 PM.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Shutdown): Cold administrative reminders kill social rapport."
+      },
+      {
+        "id": "C",
+        "text": "Remote teams have a 25% lower engagement rate according to recent studies.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Pedantic Mismatch): Citing statistics ruins warm social connection."
+      },
+      {
+        "id": "D",
+        "text": "Are you feeling burnt out by the time zone differences?",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Projected Negative Emotion): Projecting negative emotion onto a warm social post."
+      }
+    ],
+    "core_takeaway": "Reciprocate social warmth naturally to reinforce team trust."
+  },
+  {
+    "scenario_id": "d4fe7978-2f6a-4bbb-bea4-bd0aebd99053",
+    "channel": "iMessage",
+    "conversation_type": "Practical",
+    "difficulty_level": 3,
+    "context": "During a iMessage discussion on 'Managing panic over a sent email with a broken link', a colleague asks: 'We have 5 minutes before the presentation. What are our 2 main options and which one should we execute?'",
+    "prompt": "How do you respond to MATCH their practical state under time pressure?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Option A: Deploy fallback build (5 mins). Option B: Pause queue. Recommended: Option A.",
+        "is_correct": true,
+        "response_type": "Practical",
+        "feedback": "CORRECT (Practical Matching): Delivers crisp, structured, actionable operational choices."
+      },
+      {
+        "id": "B",
+        "text": "Take a deep breath! We are an awesome team and we got this!",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Emotional Cheerleading): Pep talks during time-critical moments delay action."
+      },
+      {
+        "id": "C",
+        "text": "We should schedule a retrospective next week to discuss team communication.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Timing Failure): Discussing future retros when immediate data is needed."
+      },
+      {
+        "id": "D",
+        "text": "I get so anxious when presentations happen on short notice!",
+        "is_correct": false,
+        "response_type": "Emotional",
+        "feedback": "MISMATCH (Self-Centered Emotion): Burdening others with your anxiety when a choice is needed."
+      }
+    ],
+    "core_takeaway": "Deliver crisp structured choices when time-critical practical decisions are requested."
+  },
+  {
+    "scenario_id": "ffc5b015-8fa4-4aef-ba4d-c15a2a66e1be",
+    "channel": "Zoom",
+    "conversation_type": "Emotional",
+    "difficulty_level": 3,
+    "context": "In a Zoom exchange about 'Handling direct report fear about AI automation in their role', a coworker vents: 'I've been working my tail off all week, but every time we get close to the finish line, another issue resets everything. I feel so burnt out and honestly doubt if my effort even matters.'",
+    "prompt": "How do you respond to MATCH their emotional state naturally?",
+    "options": [
+      {
+        "id": "A",
+        "text": "That sounds completely draining. Busting your butt only to have the finish line moved is so exhausting. Is that where your head is at right now?",
+        "is_correct": true,
+        "response_type": "Emotional",
+        "feedback": "CORRECT (Natural Emotional Match): Validates their exhaustion in real conversational language."
+      },
+      {
+        "id": "B",
+        "text": "You should try using the Pomodoro technique and block your calendar for quiet focus time.",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Unsolicited Optimization): Giving task tips when someone is exhausted invalidates their feelings."
+      },
+      {
+        "id": "C",
+        "text": "Don't worry! Every setback is just a step toward greatness! Stay positive! \u2728",
+        "is_correct": false,
+        "response_type": "Mismatch",
+        "feedback": "MISMATCH (Toxic Positivity): Slapping platitudes on real burnout breeds cynicism."
+      },
+      {
+        "id": "D",
+        "text": "Send me your task list and I'll finish the top 3 items for you tonight.",
+        "is_correct": false,
+        "response_type": "Practical",
+        "feedback": "MISMATCH (Practical Overreach): Jumping to finish tasks before acknowledging human emotion."
+      }
+    ],
+    "core_takeaway": "Validate human exhaustion with real conversational empathy before offering solutions."
   }
 ]

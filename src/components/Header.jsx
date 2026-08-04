@@ -3,11 +3,11 @@ import { Brain, Sparkles, Award, BookOpen, Eye, EyeOff } from 'lucide-react';
 
 export default function Header({ activeTab, setActiveTab, stats, supercommunicatorRank, isBlindMode, setIsBlindMode }) {
   return (
-    <header className="sticky top-0 z-50 glass-panel border-b border-slate-800/80 px-4 lg:px-8 py-3.5">
+    <header className="sticky top-0 z-50 bg-[#090d16]/95 backdrop-blur-md border-b border-slate-800/80 px-4 lg:px-8 py-3.5 shadow-xl">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         
         {/* Brand Title */}
-        <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setActiveTab('quiz')}>
+        <div className="flex items-center space-x-3 cursor-pointer shrink-0" onClick={() => setActiveTab('quiz')}>
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-violet-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-indigo-500/25">
             <Brain className="w-6 h-6 text-white" />
           </div>
@@ -25,7 +25,7 @@ export default function Header({ activeTab, setActiveTab, stats, supercommunicat
         </div>
 
         {/* Tab & Blind Mode Controls */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 flex-wrap justify-center">
           <nav className="flex items-center space-x-1.5 bg-slate-900/90 p-1.5 rounded-xl border border-slate-800">
             <button
               onClick={() => setActiveTab('quiz')}
@@ -77,7 +77,7 @@ export default function Header({ activeTab, setActiveTab, stats, supercommunicat
         </div>
 
         {/* User Rank & Score Pills */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 shrink-0">
           <div className="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs">
             <Award className="w-4 h-4 text-amber-400" />
             <span className="text-slate-400">Rank:</span>
