@@ -12,10 +12,11 @@ import {
   Heart, 
   Share2, 
   AlertTriangle,
-  Lightbulb
+  Lightbulb,
+  EyeOff
 } from 'lucide-react';
 
-export default function QuizCard({ scenario, onAnswerSubmitted, onNextScenario, scenarioIndex, totalScenarios }) {
+export default function QuizCard({ scenario, onAnswerSubmitted, onNextScenario, scenarioIndex, totalScenarios, isBlindMode }) {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
 
@@ -77,10 +78,18 @@ export default function QuizCard({ scenario, onAnswerSubmitted, onNextScenario, 
               <span>{channelInfo.label}</span>
             </span>
 
-            <span className={`flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-medium border ${stateInfo.style}`}>
-              {stateInfo.icon}
-              <span>{stateInfo.label}</span>
-            </span>
+            {/* State Badge (Hidden during Blind Mode until answered) */}
+            {isBlindMode && !isAnswered ? (
+              <span className="flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-medium border bg-purple-950/40 text-purple-300 border-purple-500/40 animate-pulse">
+                <EyeOff className="w-3.5 h-3.5 text-purple-400" />
+                <span>❓ Hidden State (Diagnose from Subtext)</span>
+              </span>
+            ) : (
+              <span className={`flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-medium border ${stateInfo.style}`}>
+                {stateInfo.icon}
+                <span>{stateInfo.label}</span>
+              </span>
+            )}
           </div>
 
           <div className="text-xs text-slate-400 font-mono">
@@ -202,9 +211,17 @@ export default function QuizCard({ scenario, onAnswerSubmitted, onNextScenario, 
               )}
             </div>
 
-            <span className="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 border border-slate-700">
-              Type: {selectedOption.response_type}
-            </span>
+            <div className="flex items-center space-x-2">
+              {isBlindMode && (
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-md bg-purple-900/60 text-purple-300 border border-purple-700">
+                  Revealed State: {scenario.conversation_type}
+                </span>
+              )}
+
+              <span className="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 border border-slate-700">
+                Type: {selectedOption.response_type}
+              </span>
+            </div>
           </div>
 
           <p className="text-sm text-slate-300 leading-relaxed">

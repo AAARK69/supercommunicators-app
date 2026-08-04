@@ -8,6 +8,7 @@ import seedScenarios from './data/scenarios_seed.json';
 export default function App() {
   const [activeTab, setActiveTab] = useState('quiz');
   const [currentScenarioIndex, setCurrentScenarioIndex] = useState(0);
+  const [isBlindMode, setIsBlindMode] = useState(false);
   
   const [stats, setStats] = useState({
     totalAnswered: 0,
@@ -24,9 +25,9 @@ export default function App() {
   const calculateRank = () => {
     if (stats.totalAnswered === 0) return 'Novice Listener';
     const accuracy = (stats.totalCorrect / stats.totalAnswered) * 100;
-    if (stats.totalAnswered >= 10 && accuracy >= 90) return 'Master Supercommunicator 🧠';
-    if (stats.totalAnswered >= 5 && accuracy >= 80) return 'Advanced Matcher 🌟';
-    if (stats.totalAnswered >= 3 && accuracy >= 60) return 'Active Listener 🎧';
+    if (stats.totalAnswered >= 15 && accuracy >= 90) return 'Grandmaster Supercommunicator 🧠✨';
+    if (stats.totalAnswered >= 10 && accuracy >= 80) return 'Master Matcher 🌟';
+    if (stats.totalAnswered >= 5 && accuracy >= 60) return 'Active Listener 🎧';
     return 'Conversational Apprentice 💬';
   };
 
@@ -97,7 +98,9 @@ export default function App() {
         activeTab={activeTab} 
         setActiveTab={setActiveTab} 
         stats={stats} 
-        supercommunicatorRank={calculateRank()} 
+        supercommunicatorRank={calculateRank()}
+        isBlindMode={isBlindMode}
+        setIsBlindMode={setIsBlindMode}
       />
 
       {/* Main Container */}
@@ -119,6 +122,7 @@ export default function App() {
               onNextScenario={handleNextScenario}
               scenarioIndex={currentScenarioIndex}
               totalScenarios={seedScenarios.length}
+              isBlindMode={isBlindMode}
             />
 
           </div>
@@ -131,7 +135,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-slate-900 py-6 text-center text-xs text-slate-500">
-        <p>Supercommunicators MCQ Training Module • Powered by Charles Duhigg's Framework & Antigravity Pipeline</p>
+        <p>Supercommunicators MCQ Training Engine • 50 High-Stakes Scenarios • Powered by Charles Duhigg's Framework</p>
       </footer>
 
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Brain, Sparkles, Award, BookOpen } from 'lucide-react';
+import { Brain, Sparkles, Award, BookOpen, Eye, EyeOff } from 'lucide-react';
 
-export default function Header({ activeTab, setActiveTab, stats, supercommunicatorRank }) {
+export default function Header({ activeTab, setActiveTab, stats, supercommunicatorRank, isBlindMode, setIsBlindMode }) {
   return (
     <header className="sticky top-0 z-50 glass-panel border-b border-slate-800/80 px-4 lg:px-8 py-3.5">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
@@ -24,32 +24,57 @@ export default function Header({ activeTab, setActiveTab, stats, supercommunicat
           </div>
         </div>
 
-        {/* Tab Navigation */}
-        <nav className="flex items-center space-x-1.5 bg-slate-900/90 p-1.5 rounded-xl border border-slate-800">
-          <button
-            onClick={() => setActiveTab('quiz')}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-              activeTab === 'quiz'
-                ? 'bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
-            }`}
-          >
-            <Sparkles className="w-4 h-4" />
-            <span>Quiz Trainer</span>
-          </button>
+        {/* Tab & Blind Mode Controls */}
+        <div className="flex items-center space-x-3">
+          <nav className="flex items-center space-x-1.5 bg-slate-900/90 p-1.5 rounded-xl border border-slate-800">
+            <button
+              onClick={() => setActiveTab('quiz')}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                activeTab === 'quiz'
+                  ? 'bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+              }`}
+            >
+              <Sparkles className="w-4 h-4" />
+              <span>Quiz Trainer</span>
+            </button>
 
+            <button
+              onClick={() => setActiveTab('guide')}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                activeTab === 'guide'
+                  ? 'bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+              }`}
+            >
+              <BookOpen className="w-4 h-4 text-emerald-400" />
+              <span>Framework Guide</span>
+            </button>
+          </nav>
+
+          {/* Blind Mode Toggle Button */}
           <button
-            onClick={() => setActiveTab('guide')}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-              activeTab === 'guide'
-                ? 'bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+            onClick={() => setIsBlindMode(!isBlindMode)}
+            className={`flex items-center space-x-2 px-3.5 py-2 rounded-xl border text-xs font-semibold transition-all ${
+              isBlindMode
+                ? 'bg-purple-950/80 border-purple-500/60 text-purple-300 shadow-md shadow-purple-500/20'
+                : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
             }`}
+            title="Blind Mode hides category hints so you must diagnose the conversation state yourself!"
           >
-            <BookOpen className="w-4 h-4 text-emerald-400" />
-            <span>Framework Guide</span>
+            {isBlindMode ? (
+              <>
+                <EyeOff className="w-4 h-4 text-purple-400" />
+                <span>Blind Mode ON 🙈</span>
+              </>
+            ) : (
+              <>
+                <Eye className="w-4 h-4 text-indigo-400" />
+                <span>Standard Mode 👁️</span>
+              </>
+            )}
           </button>
-        </nav>
+        </div>
 
         {/* User Rank & Score Pills */}
         <div className="flex items-center space-x-3">
